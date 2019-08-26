@@ -14,7 +14,7 @@ BOT_NAME = 'SearchDomain'
 SPIDER_MODULES = ['SearchDomain.spiders']
 NEWSPIDER_MODULE = 'SearchDomain.spiders'
 FEED_EXPORT_ENCODING = 'utf-8'
-LOG_FILE = 'jingdong.txt'
+#LOG_FILE = 'jingdong.txt'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 # USER_AGENT = 'SearchDomain (+http://www.yourdomain.com)'

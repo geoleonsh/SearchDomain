@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-import scrapy
-import string
 import random
+import string
 import urllib.parse
-from scrapy.spiders import Request, Rule
+import scrapy
+from scrapy.spiders import Request
 from items import SearchdomainItem
 
 
@@ -14,7 +14,7 @@ class JingdongSpider(scrapy.Spider):
     # 修改域名后缀
     suffix = '.com'
     # 修改域名字母个数
-    count = 4
+    count = 5
 
     def start_requests(self):
         low_case = string.ascii_lowercase
