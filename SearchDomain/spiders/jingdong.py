@@ -12,9 +12,9 @@ class JingdongSpider(scrapy.Spider):
     allowed_domains = ["net.jdcloud.com"]
     api_url = 'https://net.jdcloud.com/search/searchDomain?'
     # 修改域名后缀
-    suffix = '.com'
+    suffix = '.net'
     # 修改域名字母个数
-    count = 5
+    count = 4
 
     def start_requests(self):
         low_case = string.ascii_lowercase
@@ -28,8 +28,8 @@ class JingdongSpider(scrapy.Spider):
 
     def page_parse(self, response):
         sel = scrapy.Selector(response)
-        domain = sel.xpath('//table[@class="search-tbl"]/tbody/tr[1]/td/text()').extract_first()
-        state = sel.xpath('//table[@class="search-tbl"]/tbody/tr[1]/td/span/text()').extract_first()
+        domain = sel.xpath('//div[@class="other-con"]/table/tbody/tr[1]/td[1]/text()').extract_first()
+        state = sel.xpath('//div[@class="other-con"]/table/tbody/tr[1]/td[1]/span/text()').extract_first()
         item = SearchdomainItem()
         item['domain'] = domain
         item['state'] = state

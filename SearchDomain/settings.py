@@ -14,7 +14,8 @@ BOT_NAME = 'SearchDomain'
 SPIDER_MODULES = ['SearchDomain.spiders']
 NEWSPIDER_MODULE = 'SearchDomain.spiders'
 FEED_EXPORT_ENCODING = 'utf-8'
-#LOG_FILE = 'jingdong.txt'
+LOG_FILE = 'jingdong.txt'
+LOG_LEVEL = 'INFO'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 # USER_AGENT = 'SearchDomain (+http://www.yourdomain.com)'
@@ -28,7 +29,7 @@ ROBOTSTXT_OBEY = True
 # Configure a delay for requests for the same website (default: 0)
 # See http://scrapy.readthedocs.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
-# DOWNLOAD_DELAY = 3
+DOWNLOAD_DELAY = 3
 # The download delay setting will honor only one of:
 # CONCURRENT_REQUESTS_PER_DOMAIN = 16
 # CONCURRENT_REQUESTS_PER_IP = 16
@@ -53,9 +54,9 @@ ROBOTSTXT_OBEY = True
 
 # Enable or disable downloader middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
-DOWNLOADER_MIDDLEWARES = {
-    'SearchDomain.middlewares.SearchdomainSpiderMiddleware': 543,
-}
+# DOWNLOADER_MIDDLEWARES = {
+#     'SearchDomain.middlewares.SearchdomainSpiderMiddleware': 543,
+# }
 
 # Enable or disable extensions
 # See http://scrapy.readthedocs.org/en/latest/topics/extensions.html

@@ -2,4 +2,4 @@
 # -*- coding: utf-8 -*-
 import scrapy.cmdline
 
-scrapy.cmdline.execute("scrapy crawl searchdomain".split())
+scrapy.cmdline.execute("scrapy crawl searchdomain2".split())
